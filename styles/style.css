@@ -22,6 +22,10 @@ h2 {
     text-transform: uppercase;
 }
 
+ul {
+    list-style-type: none;
+}
+
 /* links */
 
 a {
@@ -71,4 +75,17 @@ a:active {
 
 .sm-icon:hover {
     color: #7B2CBF;
+}
+
+/* size of page */
+
+.main-container {
+    max-width: 960px;
+    margin: auto;
+}
+
+@media (min-width: 1200px) {
+    .main-container {
+        max-width: 1140px;
+    }
 }
