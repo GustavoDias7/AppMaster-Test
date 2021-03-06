@@ -1,7 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
 * {
-    box-sizing: border-box;
     padding: 0;
     margin: 0;
     color: #444;
@@ -82,6 +81,57 @@ a:active {
 .main-container {
     max-width: 960px;
     margin: auto;
+}
+
+/* === CLIENT === */
+
+#client-carousel-container {
+    box-sizing: border-box;
+    overflow: hidden;
+}
+
+#slider {
+    display: flex;
+    transition: .5s ease;
+    transform: translateX(0);
+}
+
+.logo-container {
+    min-width: calc(20% - 20px);
+    max-width: calc(20% - 20px);
+    margin-right: 20px;
+}
+
+.client-logo {
+    width: 100%;
+    opacity: .6;
+    transition: .3s ease-out;
+}
+
+.client-logo:hover {
+    opacity: 1;
+}
+
+#mini-button-container {
+    text-align: center;
+}
+
+.mini-button {
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    border: none;
+    background-color: #b461f786;
+    cursor: pointer;
+    transition: .2s ease-out;
+}
+
+.mini-button:hover {
+    background-color: #7B2CBF;
+}
+
+.active-mini-button {
+    background-color: #7B2CBF;
 }
 
 @media (min-width: 1200px) {
