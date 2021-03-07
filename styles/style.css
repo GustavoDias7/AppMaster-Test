@@ -128,6 +128,40 @@ a:active {
 
 /* === HERO === */
 
+#hero {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 408px;
+    background-image: url('../assets/background.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.white-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: .85;
+    background-color: #fff;
+}
+
+#hero-content {
+    position: relative;
+    max-width: 615px;
+    text-align: center;
+    z-index: 1;
+}
+
+#hero-content h2 {
+    font-size: 64px;
+    margin-bottom: 40px;
+}
+
 /* === ABOUT === */
 
 /* === SERVICES === */
