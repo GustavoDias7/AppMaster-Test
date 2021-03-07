@@ -76,11 +76,26 @@ a:active {
     color: #7B2CBF;
 }
 
-/* size of page */
+/* sizes and spaces of the page */
 
 .main-container {
     max-width: 960px;
     margin: auto;
+}
+
+#about, 
+#services, 
+#clients, 
+#portfolio,
+#testimonials,
+#cta,
+#our-team,
+#contact-us {
+    padding: 30px 0;
+}
+
+.section-header {
+    margin-bottom: 30px;
 }
 
 /* === CLIENT === */
