@@ -97,13 +97,12 @@ a:active {
 }
 
 .logo-container {
-    min-width: calc(20% - 20px);
-    max-width: calc(20% - 20px);
-    margin-right: 20px;
+    min-width: 20%;
+    max-width: 20%;
 }
 
 .client-logo {
-    width: 100%;
+    width: 80%;
     opacity: .6;
     transition: .3s ease-out;
 }
@@ -134,8 +133,24 @@ a:active {
     background-color: #7B2CBF;
 }
 
+.mini-button:nth-child(5) {
+    display: none;
+}
+
 @media (min-width: 1200px) {
     .main-container {
         max-width: 1140px;
+    }
+
+}
+
+@media (max-width: 767px) {
+    .logo-container {
+        min-width: 25%;
+        max-width: 25%;
+    }
+
+    .mini-button:nth-child(5) {
+        display: inline;
     }
 }
