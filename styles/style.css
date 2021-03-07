@@ -1,3 +1,27 @@
+/*
+======== INDEX ========
+GENERAL STYLES
+    links
+    buttons
+    icons
+    sizes and spaces of the page
+TOPBAR
+MAIN-HEADER
+HERO
+ABOUT
+SERVICES
+CLIENT
+PORTIFOLIO
+TESTIMONIALS
+CTA
+OUR-TEAM
+CONTACT-US
+FOOTER
+=======================
+*/
+
+/* === GENERAL STYLES === */
+
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
 * {
@@ -98,6 +122,16 @@ a:active {
     margin-bottom: 30px;
 }
 
+/* === TOPBAR === */
+
+/* === MAIN-HEADER === */
+
+/* === HERO === */
+
+/* === ABOUT === */
+
+/* === SERVICES === */
+
 /* === CLIENT === */
 
 #client-carousel-container {
@@ -151,6 +185,18 @@ a:active {
 .mini-button:nth-child(5) {
     display: none;
 }
+
+/* === PORTIFOLIO === */
+
+/* === TESTIMONIALS === */
+
+/* === CTA === */
+
+/* === OUR-TEAM === */
+
+/* === CONTACT-US === */
+
+/* === FOOTER === */
 
 @media (min-width: 1200px) {
     .main-container {
