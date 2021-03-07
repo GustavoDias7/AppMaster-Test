@@ -5,7 +5,7 @@ let quantItems = document.querySelectorAll('.client-logo').length;
 let quantVisibleItems = getQuantVisibleItems();
 let overflowItem = quantItems - quantVisibleItems;
 let widthOffset = widthSlider / quantVisibleItems;
-let currentOffset = 0;
+let currentOffset = 0; /* where the offset is */
 let interval;
 
 function getQuantVisibleItems() {
@@ -16,28 +16,37 @@ function getQuantVisibleItems() {
 
 miniButtons.forEach((item, index) => {
     item.addEventListener('click', () => {
+        /* Stop carousel auto loop */
+        clearInterval(interval);
+
+        /* Active the style of the clicked mini-button */
         miniButtons.forEach(item => {
             item.classList.remove('active-mini-button');
         });
         item.classList.add('active-mini-button');
         slider.style.transform = `translateX(${-widthOffset * index}px)`;
         currentOffset = -widthOffset * index;
-        clearInterval(interval);
-        startAutoSlice();
+
+        /* restart auto loop */
+        startAutoSlide();
     })
 });
 
-function startAutoSlice() {
+function startAutoSlide() {
     interval = setInterval(() => {
+        /* update the logo position */
         currentOffset === -widthOffset * overflowItem ? currentOffset = 0 : currentOffset -= widthOffset;
         slider.style.transform = `translateX(${currentOffset}px)`;
+
+        /* Active the style of the clicked mini-button */
         miniButtons.forEach(item => {
             item.classList.remove('active-mini-button');
         });
         miniButtons[currentOffset / -widthOffset].classList.add('active-mini-button');
+        
     }, 3000);
 }
-startAutoSlice();
+startAutoSlide();
 
 /* === resposive carousel === */
 
@@ -66,6 +75,6 @@ function updateCarouselResponsivity() {
     /* reset position of slider (begin) */
     slider.style.transform = `translateX(${currentOffset}px)`;
 
-    /* restart loop */
-    startAutoSlice();
+    /* restart auto loop */
+    startAutoSlide();
 }
