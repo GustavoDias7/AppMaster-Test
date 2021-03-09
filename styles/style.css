@@ -320,6 +320,38 @@ a:active {
 
 /* === TESTIMONIALS === */
 
+#testimonials-container {
+    box-sizing: border-box;
+    display: flex;
+    justify-content: space-between;
+}
+
+.testimonial-card {
+    box-sizing: border-box;
+    text-align: center;
+    max-width: 310px;
+    padding: 30px 10px;
+    border-radius: 10px;
+    border: 2px solid rgba(73, 78, 92, 0.2);
+}
+
+.quote {
+    display: flex;
+}
+
+.quote i {
+    font-size: 32px;
+    color: #7a2cbf25;
+}
+
+.avatar {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 50%;
+    margin-top: 24px;
+}
+
 /* === CTA === */
 
 /* === OUR-TEAM === */
@@ -344,6 +376,9 @@ a:active {
         overflow: hidden;
     }
 
+    .testimonial-card {
+        max-width: 370px;
+    }
 }
 
 @media (max-width: 991px) {
@@ -354,6 +389,15 @@ a:active {
 
     .services-card {
         width: 70%;
+    }
+
+    #testimonials-container {
+        display: block;
+    }
+
+    .testimonial-card {
+        margin: 30px 0;
+        max-width: 100%;
     }
 }
 
