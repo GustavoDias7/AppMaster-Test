@@ -75,7 +75,7 @@ a:active {
 .button {
     display: inline-block;
     box-sizing: border-box;
-    width: 140px;
+    width: 140px !important;
     padding: 10px 0;
     text-align: center;
     color: #fff !important;
@@ -86,6 +86,11 @@ a:active {
 
 .button:hover {
     background-color: #b361f7;
+}
+
+.contact-form-btn {
+    cursor: pointer;
+    margin: auto;
 }
 
 /* icons */
@@ -107,8 +112,10 @@ a:active {
 /* sizes and spaces of the page */
 
 .main-container {
+    box-sizing: border-box;
     max-width: 960px;
     margin: auto;
+    padding: 0 10px;
 }
 
 #about, 
@@ -358,7 +365,68 @@ a:active {
 
 /* === CONTACT-US === */
 
-/* === FOOTER === */
+.contact-card-container {
+    display: flex;
+    justify-content: space-between;
+}
+
+.contact-card {
+    box-sizing: border-box;
+    flex: 1;
+    text-align: center;
+    padding: 30px;
+}
+
+.contact-card:nth-child(2) {
+    border-right: 2px solid rgba(73, 78, 92, 0.2);
+    border-left: 2px solid rgba(73, 78, 92, 0.2);
+}
+
+.contact-card i {
+    margin-bottom: 10px;
+}
+
+#contact-form {
+    margin-top: 50px;
+}
+
+.row-contact-form {
+    display: flex;
+    text-align: center;
+}
+
+.row-contact-form input,
+.row-contact-form textarea {
+    box-sizing: border-box;
+    width: 100%;
+    margin-bottom: 16px;
+    padding: 10px 14px;
+    font-size: 16px;
+    border: 2px solid rgba(73, 78, 92, 0.2);
+}
+
+.row-contact-form textarea {
+    height: 150px;
+}
+
+#name {
+    margin-right: 16px;
+}
+
+/* === MAIN-FOOTER === */
+
+#main-footer {
+    padding: 30px 0;
+    background-color: #b361f7;
+}
+
+.main-footer-content {
+    text-align: center;
+}
+
+.main-footer-content p {
+    color: #fff;
+}
 
 @media (min-width: 1200px) {
     .main-container {
@@ -382,13 +450,22 @@ a:active {
 }
 
 @media (max-width: 991px) {
+    .main-container {
+        max-width: 720px;
+    }
+
     #services-card-container {
         flex-direction: column;
         align-content: center;
     }
 
     .services-card {
-        width: 70%;
+        width: 100%;
+    }
+
+    .product {
+        width: 345px;
+        height: 345px;
     }
 
     #testimonials-container {
@@ -402,12 +479,41 @@ a:active {
 }
 
 @media (max-width: 767px) {
+    .main-container {
+        max-width: 540px;
+    }
+    
+    #hero-content h2 {
+        font-size: 48px;
+    }
+
     .logo-container {
         min-width: 25%;
         max-width: 25%;
     }
 
+    .product {
+        width: 520px;
+        height: 520px;
+    }
+
+    .product-description {
+        padding: 25px;
+    }
+
     .mini-button:nth-child(5) {
         display: inline;
+    }
+
+    .contact-card-container {
+        display: block;
+    }
+
+    .contact-card:nth-child(2) {
+        border: none;
+    }
+
+    .row-contact-form {
+        display: block;
     }
 }

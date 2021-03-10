@@ -528,36 +528,40 @@
             </div>
             <div class="contact-card-container">
                 <div class="contact-card">
-                    <img src="" alt="" class="md-icon">
+                    <i class="fas fa-map-marker-alt md-icon"></i>
                     <h3>Address</h3>
                     <p>Rio de Janeiro-RJ, Brasil</p>
                 </div>
                 <div class="contact-card">
-                    <img src="" alt="" class="md-icon">
-                    <h3>Número de telefone</h3>
+                    <i class="fas fa-mobile-alt md-icon"></i>
+                    <h3>Telefone</h3>
                     <p>+55 (11) 4002-8922</p>
                 </div>
                 <div class="contact-card">
-                    <img src="" alt="" class="md-icon">
+                    <i class="far fa-envelope md-icon"></i>
                     <h3>Email</h3>
                     <p>startup@email.com</p>
                 </div>
             </div>
-            <form>
+            <form id="contact-form">
                 <ul>
-                    <li><input type="text" placeholder="Seu nome"></li>
-                    <li><input type="email" placeholder="Seu Email"></li>
-                    <li><input type="text" placeholder="Assunto"></li>
-                    <li><textarea name="" id="" cols="30" rows="10" placeholder="Mensagem"></textarea></li>
-                    <li><input class="button" type="button" value="Enviar"></li>
+                    <li class="row-contact-form">
+                        <input id="name" type="text" placeholder="Seu nome">
+                        <input type="email" placeholder="Seu Email">
+                    </li>
+                    <li class="row-contact-form"><input type="text" placeholder="Assunto"></li>
+                    <li class="row-contact-form"><textarea placeholder="Mensagem"></textarea></li>
+                    <li class="row-contact-form"><input class="button contact-form-btn" type="button" value="Enviar"></li>
                 </ul>
             </form>
         </div>
     </section>
 
-    <footer>
+    <footer id="main-footer">
         <div class="main-container">
-            <p>Todos os direitos reservados.</p>
+            <div class="main-footer-content">
+                <p>&#169; Todos os direitos reservados.</p>
+            </div>
         </div>
     </footer>
 </body>
