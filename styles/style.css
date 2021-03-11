@@ -16,7 +16,7 @@ TESTIMONIALS
 CTA
 OUR-TEAM
 CONTACT-US
-FOOTER
+MAIN-FOOTER
 =======================
 */
 
@@ -215,8 +215,8 @@ a:active {
 }
 
 .logo-container {
-    min-width: 20%;
-    max-width: 20%;
+    min-width: calc(100% / 5);
+    max-width: calc(100% / 5);
 }
 
 .client-logo {
@@ -251,7 +251,9 @@ a:active {
     background-color: #7B2CBF;
 }
 
-.mini-button:nth-child(5) {
+.mini-button:nth-child(5), 
+.mini-button:nth-child(6),
+.mini-button:nth-child(7) {
     display: none;
 }
 
@@ -488,8 +490,8 @@ a:active {
     }
 
     .logo-container {
-        min-width: 25%;
-        max-width: 25%;
+        min-width: calc(100% / 4);
+        max-width: calc(100% / 4);
     }
 
     .product {
@@ -515,5 +517,27 @@ a:active {
 
     .row-contact-form {
         display: block;
+    }
+}
+
+@media (max-width: 575px) {
+    .logo-container {
+        min-width: calc(100% / 3);
+        max-width: calc(100% / 3);
+    }
+    
+    .mini-button:nth-child(6) {
+        display: inline;
+    }
+}
+
+@media (max-width: 479px) {
+    .logo-container {
+        min-width: calc(100% / 2);
+        max-width: calc(100% / 2);
+    }
+
+    .mini-button:nth-child(7) {
+        display: inline;
     }
 }

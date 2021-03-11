@@ -11,7 +11,16 @@ let interval;
 function getQuantVisibleItems() {
     /* update how many items will be visible in carousel */
     let screenWidth = window.document.documentElement.clientWidth;
-    return screenWidth > 767 ? 5 : 4; /* adjust for more screen sizes */
+     /* adjust for more screen sizes */
+    if (screenWidth > 767) {
+        return 5;
+    } else if (screenWidth <= 767 && screenWidth > 575) {
+        return 4;
+    } else if (screenWidth <= 575 && screenWidth > 479) {
+        return 3;
+    } else if (screenWidth <= 479){
+        return 2
+    }
 }
 
 miniButtons.forEach((item, index) => {
