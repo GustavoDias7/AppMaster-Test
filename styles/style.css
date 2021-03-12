@@ -267,25 +267,28 @@ a:active {
 
 .product {
     width: 300px;
-    height: 300px;
+    box-sizing: border-box;
     margin-bottom: 30px;
     overflow: hidden;
 }
 
-.product-hover {
+.product-content {
+    position: relative;
     width: 100%;
-    height: 100%;
+    padding-top: 100%;
     transition: .5s ease-in-out;
 }
 
-.product-hover:hover {
-    transform: translateY(-25%);
+.product-content:hover {
+    transform: translateY(-10%);
 }
 
 .product-image-container {
+    position: absolute;
+    top: 0;
+    left: 0;
     width: 100%;
     height: 100%;
-    overflow: hidden;
 }
 
 .product-image {
@@ -295,12 +298,23 @@ a:active {
 }
 
 .product-description {
+    position: absolute;
+    bottom: -25%;
+    left: 0;
+
     display: flex;
     justify-content: space-between;
+
+    width: 100%;
     height: 25%;
-    padding: 10px;
+    padding: 0 20px;
     box-sizing: border-box;
     background-color: #7B2CBF;
+    transition: .5s ease-in-out;
+}
+
+.product-content:hover .product-description {
+    transform: translateY(-60%)
 }
 
 .product-description h3,
@@ -312,7 +326,7 @@ a:active {
 .product-header {
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: space-evenly;
 }
 
 
@@ -437,13 +451,6 @@ a:active {
 
     .product {
         width: 350px;
-        height: 350px;
-    }
-    
-    .product-image-container {
-        width: 100%;
-        height: 100%;
-        overflow: hidden;
     }
 
     .testimonial-card {
@@ -466,8 +473,7 @@ a:active {
     }
 
     .product {
-        width: 345px;
-        height: 345px;
+        width: 340px;
     }
 
     #testimonials-container {
@@ -495,12 +501,7 @@ a:active {
     }
 
     .product {
-        width: 520px;
-        height: 520px;
-    }
-
-    .product-description {
-        padding: 25px;
+        width: 100%;
     }
 
     .mini-button:nth-child(5) {
