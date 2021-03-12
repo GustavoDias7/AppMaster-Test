@@ -189,7 +189,7 @@ a:active {
     width: 49%;
     margin: 15px 0;
     padding: 40px;
-    box-shadow: 10px 10px 15px rgba(73, 78, 92, 0.1);
+    box-shadow: 10px 10px 15px rgba(73, 78, 92, 0.25);
     transition: .5s;
 }
 
@@ -536,6 +536,14 @@ a:active {
     #hero-content h2 {
         font-size: 36px;
         margin-bottom: 30px;
+    }
+
+    .services-card {
+        flex-direction: column;
+    }
+
+    .services-card i {
+        margin-bottom: 10px;
     }
 
     .logo-container {
